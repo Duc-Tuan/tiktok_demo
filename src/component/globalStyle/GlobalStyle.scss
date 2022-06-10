@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap');
 
 :root{
-    --primary: #000; 
+    --primary: #fe2c55;
     --black: #000;
     --text-color: #333;
+    --white: white;
 
     // defaultLayout
     --default-layout-height-header: 60px;
     --default-layout-wight: 1150px;
+    --default-layout-horzizontal-spacer: 24px;
 }
 
 *{
