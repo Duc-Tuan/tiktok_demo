@@ -19,11 +19,17 @@ function App() {
               Layout = Fragment;
             }
 
-            return <Route key = {index} path={router.path} element={
-              <Layout>
-                <Page />
-              </Layout>
-            } />
+            return (
+              <Route
+                key={index}
+                path={router.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              />
+            );
           })}
         </Routes>
       </div>

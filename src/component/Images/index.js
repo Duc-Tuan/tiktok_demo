@@ -1,11 +1,10 @@
 import classNames from 'classnames';
-import { useState } from 'react';
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 
 import images from '~/assets/images';
 import styles from './Image.module.scss';
 
-const Images = forwardRef(({ src, alt, classes, fallback: customFallback = images.noImage, ...props }, ref) => {
+const Images = forwardRef(({ src, alt, classes, customFallback = images.noImage, ...props }, ref) => {
   const [fallback, setFallback] = useState('');
 
   const handleError = () => {
@@ -14,7 +13,7 @@ const Images = forwardRef(({ src, alt, classes, fallback: customFallback = image
 
   return (
     <img
-      className={classNames(styles.Wrapper, classes)}
+      className={classNames(classes, styles.wrapper)}
       ref={ref}
       src={fallback || src}
       {...props}
