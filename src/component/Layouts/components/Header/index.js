@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleQuestion,
@@ -14,6 +15,10 @@ import {
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
+
+// routes config
+import routesConfig from '~/configs/routes';
+
 import style from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/component/Button';
@@ -91,7 +96,9 @@ function Header() {
   return (
     <header className={cx('wapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="tiktok" />
+        <Link to={routesConfig.home} className={cx('logo-link')}>
+          <img src={images.logo} alt="tiktok" />
+        </Link>
 
         <Search />
 
