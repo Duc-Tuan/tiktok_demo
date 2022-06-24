@@ -124,7 +124,7 @@ function Header() {
             {currenUser ? (
               <Images
                 className={cx('user-avatar')}
-                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/ddcb57a7bcd8bf0fc01c18338b2caf59~c5_300x300.webp?x-expires=1654880400&x-signature=h20mu1akX3Zz8p3Tfl8SCo0s1n0%3D"
+                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/e99846f00ab6702d7716ba8d72a98d7a~c5_100x100.jpeg?x-expires=1656266400&x-signature=%2BrAkFYnpkzeLGEKzdhBnLsxzoHw%3D"
                 alt="Nguyen Van A"
               />
             ) : (
