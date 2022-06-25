@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
@@ -28,7 +29,7 @@ function Button({
   };
 
   // remove event listener when btn is disabled
-  if(disabled) {
+  if (disabled) {
     Object.keys(props).forEach((key) => {
       if (key.startsWith('on') && typeof props[key] === 'function') {
         delete props[key];
@@ -65,5 +66,9 @@ function Button({
     </Comp>
   );
 }
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Button;

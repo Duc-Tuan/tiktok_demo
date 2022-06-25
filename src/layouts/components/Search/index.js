@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 
-import * as searchService from '~/apiService/searchService';
+import * as searchService from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountsItem from '~/component/AccountsItem';
 import classNames from 'classnames/bind';
@@ -34,6 +34,7 @@ function Search() {
       setLoading(true);
 
       const result = await searchService.search(debounced);
+
       setSearchResult(result);
 
       setLoading(false);
