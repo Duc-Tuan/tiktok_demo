@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { forwardRef, useState } from 'react';
 
@@ -22,5 +23,12 @@ const Images = forwardRef(({ src, alt, classes, customFallback = images.noImage,
     />
   );
 });
+
+Images.prototypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  classes: PropTypes.string,
+  customFallback: PropTypes.string,
+};
 
 export default Images;
